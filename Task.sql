@@ -3,6 +3,11 @@ create procedure syn.usp_ImportFileCustomerSeasonal
 as
 set nocount on
 begin
+    /*
+        Ошибка 1. В соответствии с правилами
+        именования переменных количество строк
+        указываем во мн. числе (@RowsCount)
+    */
 	declare @RowCount int = (select count(*) from syn.SA_CustomerSeasonal)
 	declare @ErrorMessage varchar(max)
 
